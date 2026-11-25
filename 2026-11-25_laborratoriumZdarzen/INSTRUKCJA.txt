@@ -1,0 +1,12 @@
+LABORATORIUM JAVASCRIPT — PRACA ZE ZDARZENIAMI
+
+1. Rozpakuj archiwum.
+2. Otwórz folder w Visual Studio Code.
+3. Otwórz index.html w przeglądarce i wybierz ćwiczenie.
+4. W VS Code otwórz plik wybranego ćwiczenia.
+5. Dopisz JavaScript między znacznikami <script> i </script> u dołu pliku.
+6. Zapisz (Ctrl+S), odśwież przeglądarkę (F5).
+7. Konsola: F12 -> Console.
+
+Nie zmieniaj nazw plików ani nie usuwaj style.css.
+Brak automatycznej oceny — oddaj nauczycielowi zmodyfikowane pliki HTML.

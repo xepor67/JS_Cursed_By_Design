@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zadanie 10 — Obsługiwacz wywołany tylko raz</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <small>Laboratorium JavaScript • Zdarzenia</small>
+            <h1>Zadanie 10: Obsługiwacz wywołany tylko raz</h1>
+            <p>Edytuj kod w pliku HTML, zapisz i odśwież przeglądarkę.</p>
+        </header>
+        <main class="wrap">
+            <a class="back" href="index.html">← Wróć do listy ćwiczeń</a>
+            <section class="panel">
+                <span class="tag">Opcje · once: true</span>
+                <h2>Polecenie</h2>
+                <p>
+                    Spraw, by pierwszy klik w przycisk zmieniał komunikat.
+                    Kolejne kliknięcia nie mogą już wywołać obsługiwacza.
+                </p>
+                <p class="notice">
+                    <strong>Wskazówka:</strong> W trzecim argumencie
+                    addEventListener() przekaż { once: true }.
+                </p>
+                <p>
+                    <strong>Oczekiwany efekt:</strong> Pierwszy klik działa,
+                    kolejne nie wywołują reakcji.
+                </p>
+            </section>
+            <section class="panel">
+                <h2>Obszar ćwiczenia</h2>
+                <div class="exercise">
+                    <button id="onceButton">Kliknij — tylko raz</button>
+                    <p id="onceInfo" class="message">Jeszcze nie kliknięto.</p>
+                </div>
+                <p style="color: #53617a">
+                    <strong>Uwaga:</strong> ten obszar zacznie reagować dopiero
+                    po napisaniu Twojego JavaScriptu.
+                </p>
+            </section>
+            <section class="panel">
+                <h2>Gdzie pisać kod?</h2>
+                <p>
+                    Otwórz ten plik w VS Code i znajdź znacznik
+                    <code class="codehint">&lt;script&gt;</code> tuż przed
+                    końcem pliku. Dopisz kod w oznaczonym miejscu. Zapisz plik
+                    (Ctrl+S) i odśwież stronę (F5). Wyniki
+                    <code class="codehint">console.log()</code> znajdziesz pod
+                    F12 → Console.
+                </p>
+            </section>
+        </main>
+        <footer>
+            Zadanie 10 z 13 · Praca własna bez automatycznego sprawdzania
+        </footer>
+        <script>
+            // ======================================================
+            // ZADANIE 10: Obsługiwacz wywołany tylko raz
+            // TUTAJ WPISZ SWÓJ KOD JAVASCRIPT.
+            // Kod HTML ćwiczenia jest już przygotowany powyżej.
+            // ======================================================
+            const baton = document.getElementById("onceButton");
+            baton.addEventListener(
+                "click",
+                () => {
+                    document.getElementById("onceInfo").textContent =
+                        "Kliknięto!";
+                    console.log("Test");
+                },
+                { once: true },
+            );
+        </script>
+    </body>
+</html>

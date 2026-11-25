@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zadanie 03 — Podwójne kliknięcie</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <small>Laboratorium JavaScript • Zdarzenia</small>
+            <h1>Zadanie 03: Podwójne kliknięcie</h1>
+            <p>Edytuj kod w pliku HTML, zapisz i odśwież przeglądarkę.</p>
+        </header>
+        <main class="wrap">
+            <a class="back" href="index.html">← Wróć do listy ćwiczeń</a>
+            <section class="panel">
+                <span class="tag">Mysz · dblclick</span>
+                <h2>Polecenie</h2>
+                <p>
+                    Zareaguj tylko na podwójne kliknięcie kafelka. Dodaj mu
+                    klasę active i zmień tekst.
+                </p>
+                <p class="notice">
+                    <strong>Wskazówka:</strong> Nasłuchuj dblclick. Klasa active
+                    ma już przygotowany wygląd w CSS.
+                </p>
+                <p>
+                    <strong>Oczekiwany efekt:</strong> Po podwójnym kliknięciu
+                    kafelek zmienia wygląd.
+                </p>
+            </section>
+            <section class="panel">
+                <h2>Obszar ćwiczenia</h2>
+                <div class="exercise">
+                    <div id="tile" class="tile" tabindex="0">
+                        Kliknij mnie dwa razy
+                    </div>
+                </div>
+                <p style="color: #53617a">
+                    <strong>Uwaga:</strong> ten obszar zacznie reagować dopiero
+                    po napisaniu Twojego JavaScriptu.
+                </p>
+            </section>
+            <section class="panel">
+                <h2>Gdzie pisać kod?</h2>
+                <p>
+                    Otwórz ten plik w VS Code i znajdź znacznik
+                    <code class="codehint">&lt;script&gt;</code> tuż przed
+                    końcem pliku. Dopisz kod w oznaczonym miejscu. Zapisz plik
+                    (Ctrl+S) i odśwież stronę (F5). Wyniki
+                    <code class="codehint">console.log()</code> znajdziesz pod
+                    F12 → Console.
+                </p>
+            </section>
+        </main>
+        <footer>
+            Zadanie 03 z 13 · Praca własna bez automatycznego sprawdzania
+        </footer>
+        <script>
+            // ======================================================
+            // ZADANIE 03: Podwójne kliknięcie
+            // TUTAJ WPISZ SWÓJ KOD JAVASCRIPT.
+            // Kod HTML ćwiczenia jest już przygotowany powyżej.
+            // ======================================================
+            const kafel = document.getElementById("tile");
+            function zmien() {
+                kafel.className = "tile active";
+                kafel.textContent = "Klikłeś mnie dwa razy";
+            }
+            kafel.addEventListener("dblclick", zmien);
+        </script>
+    </body>
+</html>

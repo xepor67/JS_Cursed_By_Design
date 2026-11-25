@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zadanie 08 — Zmiana w formularzu</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <small>Laboratorium JavaScript • Zdarzenia</small>
+            <h1>Zadanie 08: Zmiana w formularzu</h1>
+            <p>Edytuj kod w pliku HTML, zapisz i odśwież przeglądarkę.</p>
+        </header>
+        <main class="wrap">
+            <a class="back" href="index.html">← Wróć do listy ćwiczeń</a>
+            <section class="panel">
+                <span class="tag">Formularze · change</span>
+                <h2>Polecenie</h2>
+                <p>
+                    Po wybraniu koloru z listy zaktualizuj tekst w polu wyniku
+                    oraz kolor tła próbki.
+                </p>
+                <p class="notice">
+                    <strong>Wskazówka:</strong> Reaguj na change. Odczytaj
+                    select.value. Możesz użyć sample.style.backgroundColor.
+                </p>
+                <p>
+                    <strong>Oczekiwany efekt:</strong> Zmiana opcji zmienia
+                    napis i próbkę.
+                </p>
+            </section>
+            <section class="panel">
+                <h2>Obszar ćwiczenia</h2>
+                <div class="exercise">
+                    <label for="color">Wybierz kolor</label
+                    ><select id="color">
+                        <option value="">— wybierz —</option>
+                        <option value="tomato">Czerwony</option>
+                        <option value="gold">Żółty</option>
+                        <option value="skyblue">Niebieski</option>
+                    </select>
+                    <div id="sample" class="tile small">Próbka koloru</div>
+                    <p id="choice" class="message">Nie wybrano koloru.</p>
+                </div>
+                <p style="color: #53617a">
+                    <strong>Uwaga:</strong> ten obszar zacznie reagować dopiero
+                    po napisaniu Twojego JavaScriptu.
+                </p>
+            </section>
+            <section class="panel">
+                <h2>Gdzie pisać kod?</h2>
+                <p>
+                    Otwórz ten plik w VS Code i znajdź znacznik
+                    <code class="codehint">&lt;script&gt;</code> tuż przed
+                    końcem pliku. Dopisz kod w oznaczonym miejscu. Zapisz plik
+                    (Ctrl+S) i odśwież stronę (F5). Wyniki
+                    <code class="codehint">console.log()</code> znajdziesz pod
+                    F12 → Console.
+                </p>
+            </section>
+        </main>
+        <footer>
+            Zadanie 08 z 13 · Praca własna bez automatycznego sprawdzania
+        </footer>
+        <script>
+            // ======================================================
+            // ZADANIE 08: Zmiana w formularzu
+            // TUTAJ WPISZ SWÓJ KOD JAVASCRIPT.
+            // Kod HTML ćwiczenia jest już przygotowany powyżej.
+            // ======================================================
+            const color = document.getElementById("color");
+            const sample = document.getElementById("sample");
+            const choice = document.getElementById("choice");
+
+            function func() {
+                const value = color.value;
+                switch (value) {
+                    case "":
+                        console.log(value);
+                        sample.style.backgroundColor = "";
+                        choice.textContent = "Nie wybrano koloru.";
+                        break;
+                    case "tomato":
+                        console.log(value);
+                        sample.style.backgroundColor = "red";
+                        choice.textContent = "Czerwony.";
+                        break;
+                    case "gold":
+                        console.log(value);
+                        sample.style.backgroundColor = "gold";
+                        choice.textContent = "Żółty.";
+                        break;
+                    case "skyblue":
+                        console.log(value);
+                        sample.style.backgroundColor = "skyblue";
+                        choice.textContent = "Niebieski.";
+                        break;
+                }
+            }
+            color.addEventListener("change", func);
+        </script>
+    </body>
+</html>
